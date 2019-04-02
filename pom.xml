@@ -41,6 +41,7 @@
 		<web.api.front.version>1.0.0-SNAPSHOT</web.api.front.version>
 		<web.api.manager.version>1.0.0-SNAPSHOT</web.api.manager.version>
 		<web.api.service.version>1.0.0-SNAPSHOT</web.api.service.version>
+        <provider-pay-api>0.0.1-SNAPSHOT</provider-pay-api>
 	</properties>
 
 	<!-- dependency management -->
@@ -106,6 +107,11 @@
 			<!-- framework end -->
 
 			<!-- modules -->
+            <dependency>
+                <groupId>cn.ce.st.service</groupId>
+                <artifactId>provider-pay-api</artifactId>
+                <version>${provider-pay-api}</version>
+            </dependency>
 			<!-- web -->
 
 			<!-- 第三方 -->
