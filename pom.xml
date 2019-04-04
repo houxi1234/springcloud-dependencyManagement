@@ -30,13 +30,16 @@
 		<common.pool2.version>2.4.2</common.pool2.version>
 		<validation.api.version>2.0.0.Final</validation.api.version>
 		<javax.el.version>3.0.0</javax.el.version>
+		<lombok.version>1.16.22</lombok.version>
+		<mybatis.pagehelper.version>1.2.5</mybatis.pagehelper.version>
+		<jjwt.version>0.9.1</jjwt.version>
 		<!-- framework -->
-		<framework.core.version>3.1.0-SNAPSHOT</framework.core.version>
-		<framework.util.version>3.1.0-SNAPSHOT</framework.util.version>
-		<framework.web.version>3.1.0-SNAPSHOT</framework.web.version>
-		<framework.context.version>3.1.0-SNAPSHOT</framework.context.version>
-		<framework.datasource.version>3.1.0-SNAPSHOT</framework.datasource.version>
-		<framework.security.version>3.1.0-SNAPSHOT</framework.security.version>
+		<framework.core.version>0.0.1-SNAPSHOT</framework.core.version>
+		<framework.util.version>0.0.1-SNAPSHOT</framework.util.version>
+		<framework.web.version>0.0.1-SNAPSHOT</framework.web.version>
+		<framework.context.version>0.0.1-SNAPSHOT</framework.context.version>
+		<framework.datasource.version>0.0.1-SNAPSHOT</framework.datasource.version>
+		<framework.security.version>0.0.1-SNAPSHOT</framework.security.version>
 
 		<web.api.front.version>1.0.0-SNAPSHOT</web.api.front.version>
 		<web.api.manager.version>1.0.0-SNAPSHOT</web.api.manager.version>
@@ -81,25 +84,25 @@
 
 			<!-- framework -->
 			<dependency>
-				<groupId>cn.ce.st</groupId>
+				<groupId>cn.ce.st.framework</groupId>
 				<artifactId>framework-core</artifactId>
 				<version>${framework.core.version}</version>
 			</dependency>
 
 			<dependency>
-				<groupId>cn.ce.st</groupId>
+				<groupId>cn.ce.st.framework</groupId>
 				<artifactId>framework-util</artifactId>
 				<version>${framework.util.version}</version>
 			</dependency>
 
 			<dependency>
-				<groupId>cn.ce.st</groupId>
+				<groupId>cn.ce.st.framework</groupId>
 				<artifactId>framework-datasource</artifactId>
 				<version>${framework.datasource.version}</version>
 			</dependency>
 
 			<dependency>
-				<groupId>cn.ce.st</groupId>
+				<groupId>cn.ce.st.framework</groupId>
 				<artifactId>framework-security</artifactId>
 				<version>${framework.security.version}</version>
 			</dependency>
@@ -108,13 +111,25 @@
 
 			<!-- modules -->
             <dependency>
-                <groupId>cn.ce.st.service</groupId>
+                <groupId>cn.ce.st</groupId>
                 <artifactId>provider-pay-api</artifactId>
                 <version>${provider-pay-api}</version>
             </dependency>
 			<!-- web -->
 
 			<!-- 第三方 -->
+			<dependency>
+				<groupId>io.jsonwebtoken</groupId>
+				<artifactId>jjwt</artifactId>
+				<version>${jjwt.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
+			</dependency>
+
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-lang3</artifactId>
@@ -182,6 +197,12 @@
 				<groupId>com.alibaba</groupId>
 				<artifactId>druid-spring-boot-starter</artifactId>
 				<version>${springboot.druid.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.pagehelper</groupId>
+				<artifactId>pagehelper-spring-boot-starter</artifactId>
+				<version>${mybatis.pagehelper.version}</version>
 			</dependency>
 
 			<!-- redis -->
